@@ -18,28 +18,11 @@ export class TopTeamsForCrimeService {
   
   constructor(private _http: HttpClient) { 
     this.getTopCrimes();
-    this.getData();
   }
 
   //For testing only
-  getData() {
-    return this._http.get(this.APIurl)
+  getTopCrimes(): Observable<any> { // Preparing to use an interface with datatypes
+    return this._http
+    .get(this.APIurl)
   }
-  getTopCrimes() {
-    this.getData().subscribe(data => {
-      console.log(data);
-      this.data = data;
-    })
-  }
-
-//To use with Observable and an Interface
-  //getTopCrimes(){ // Preparing to use an interface with datatypes
-    //getTopCrimes(): Observable<INFLCrime[]> { // Preparing to use an interface with datatypes
-     // return this._http
-      //.get(this.APIurl)
-      //.map((res: Response) => res.json());
-
-      //.map((res: Response) => <IProduct>res.json());
-    
-  //}
 }

@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+.w100{width:100%;}
+.w25{width:25%;}
+.w30{width:30%;}
+.w40{width:40%;}
+.w50{width:50%;}
+.w60{width:60%;}
+.w70{width:70%;}
+
+.crimes-header{font-size:1.3em; font-weight: 700; background-color: #aac7ce; padding:20px;}
+.crimes-content{padding: 20px;}
+.clear-both{clear:both;}
+.float-left{float: left;}
+.float-right{float:right;}
+
+ul{list-style-type: none; padding-inline-start:0;}
+ul li { background: #f5f5f5; list-style: none; display:block; }
+ul li:nth-child(odd) { background-color: #fff; }

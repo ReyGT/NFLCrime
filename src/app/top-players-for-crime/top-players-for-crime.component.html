@@ -1,1 +1,11 @@
 <h2>Top Players for Crime</h2>
+
+<div class="crimes-header w40 float-left col1">Category</div>
+<div class="crimes-header w60 float-left col2">Arrest count</div>
+<ul class="crimes-list-ul clear-both">
+    <li *ngFor="let crimePlayers of crimesForPlayers" class="crimes-item cl-12 pad10">
+        <div class="crimes-content w40 col1 float-left">{{crimePlayers.Name}}</div>
+        <div class="crimes-content w60 col2 float-left">{{crimePlayers.arrest_count}}</div>
+        <div class=" clear-both"></div>
+    </li>
+</ul>

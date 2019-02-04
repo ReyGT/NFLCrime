@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ITopCrimes } from './topcrimesvaluetypes';
+import { TopCrimesService } from '../top-crimes.service';
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-top-crimes',
@@ -6,10 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-crimes.component.scss']
 })
 export class TopCrimesComponent implements OnInit {
+  //crimes: ITopCrimes[];
+  crimes;
+  errorMessage: string;
 
-  constructor() { }
+  constructor(private _crimeService: TopCrimesService) {
+    //this.getCrimes();
+    this.crimes = this.getCrimes();
+  }
 
   ngOnInit() {
+    
   }
+
+  getCrimes() {
+    this._crimeService.getTopCrimes()
+    .subscribe( crimes => this.crimes = crimes );
+  }
+  
 
 }

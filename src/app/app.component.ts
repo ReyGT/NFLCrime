@@ -12,7 +12,7 @@ import { TopTeamsForCrimeService } from './top-teams-for-crime.service';
 export class AppComponent {
   title = 'NFLCrime';
 
-  constructor(private _service: TopTeamsForCrimeService){
+  //constructor(private _service: TopTeamsForCrimeService){
 
-  }
+  //}
 }

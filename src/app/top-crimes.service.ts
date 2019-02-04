@@ -18,30 +18,14 @@ export class TopCrimesService {
   APIurl:string = 'http://NflArrest.com/api/v1/crime';
   data:any;
   crimes = new Array;
-  //crimes: ITopCrimes[];
   
   constructor(private _http: HttpClient) { 
     this.getTopCrimes();
-    //this.getData();
   }
 
-  //For testing only
-  //getData() {
-    //return this._http.get(this.APIurl)
-  //}
-  //getTopCrimes() {
-    //this.getData().subscribe(data => {
-      //console.log(data);
-      //this.data = data;
-    //})
-  //}
-
-//To use with Observable and an Interface
-  ///getTopCrimes(){ // Preparing to use an interface with datatypes
-    getTopCrimes(): Observable<any> { // Preparing to use an interface with datatypes
+    getTopCrimes(): Observable<any> { 
       return this._http
       .get(this.APIurl)
-      //.map((res: Response) => <any>res.json());
   }
 
 }

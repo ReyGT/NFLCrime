@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,9 +36,8 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    //NgModule,
-    RouterModule.forRoot(routes),
-    //RouterModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     TopCrimesService,

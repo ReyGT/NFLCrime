@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'
-import { AppComponent } from './app.component';
+import { TopPlayersForCrimeComponent } from './top-players-for-crime/top-players-for-crime.component';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { throwError } from 'rxjs'
 import { catchError } from 'rxjs/operators';
@@ -11,8 +11,10 @@ import 'rxjs/add/operator/map';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TopPlayersForCrimeService {
-  crimeType = 'Theft';
+  crimeType = 'Sex';
+  //crimeType = TopPlayersForCrimeComponent.listEvent;
   APIurl:string = `http://NflArrest.com/api/v1/crime/topPlayers/${this.crimeType}`;
   data:any;
   
@@ -20,8 +22,7 @@ export class TopPlayersForCrimeService {
     this.getTopCrimes();
   }
 
-  //For testing only
-  getTopCrimes(): Observable<any> { // Preparing to use an interface with datatypes
+  getTopCrimes(): Observable<any> {
     return this._http
     .get(this.APIurl)
   }

@@ -1,7 +1,9 @@
 <h2>Top Teams for Crime</h2>
 
-<div class="crimes-header w40 float-left col1">Category</div>
-<div class="crimes-header w60 float-left col2">Arrest count</div>
+<div class="crimes-header w25 float-left col1">Team</div>
+<div class="crimes-header w25 float-left col2">Team name count</div>
+<div class="crimes-header w25 float-left col1">City</div>
+<div class="crimes-header w25 float-left col2">Arrest count</div>
 <ul class="crimes-list-ul clear-both">
     <li *ngFor="let crimeTeams of crimesForTeams" class="crimes-item cl-12 pad10">
         <div class="crimes-content w25 col1 float-left">{{crimeTeams.Team}}</div>
